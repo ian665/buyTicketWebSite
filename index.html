@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<!--head-->
+<head>
+    <meta charset="UTF-8">
+    <title>TIKET CLUB official website</title>
+    <meta name="descrption" content="first page of index ">
+    <meta name="viewport" content="width=device-width">
+    <script src="HTML_CSS_WebDesign2\top\js\toggle-menu.js"></script>
+    <link href="index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<!--head-->
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a class="header-logo" href="index.html">
+                <img src="圖片庫\2.jpg" alt="TIKET">
+            </a>
+            <div class="header-site-menu">
+                <nav class="site-menu">
+                    <ul>
+                      <li><a href="signin.html">SIGN IN</a></li>  
+                      <li><a href="signup.html">SIGN UP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--main-->
+    <main class="main">
+      <ul class="slides">
+        <input type="radio" id="control-1" name="control" checked>
+        <input type="radio" id="control-2" name="control">
+        <input type="radio" id="control-3" name="control">
+        <input type="radio" id="control-4" name="control">
+        
+        <!--  Left/Right Button  -->
+        <div class="navigator slide-1">
+          <label for="control-3">
+            <i class="fas fa-chevron-left"></i>
+          </label>
+          <label for="control-2">
+            <i class="fas fa-chevron-right"></i>
+          </label>
+        </div>
+        
+        <div class="navigator slide-2">
+          <label for="control-1">
+            <i class="fas fa-chevron-left"></i>
+          </label>
+          <label for="control-3">
+            <i class="fas fa-chevron-right"></i>
+          </label>
+        </div>
+        
+        <div class="navigator slide-3">
+          <label for="control-2">
+            <i class="fas fa-chevron-left"></i>
+          </label>
+          <label for="control-4">
+            <i class="fas fa-chevron-right"></i>
+          </label>
+        </div>
+
+        <div class="navigator slide-4">
+          <label for="control-3">
+            <i class="fas fa-chevron-left"></i>
+          </label>
+          <label for="control-1">
+            <i class="fas fa-chevron-right"></i>
+          </label>
+        </div>
+        <!--  /Left/Right Button  -->
+        
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        
+        <div class="controls-visible">
+          <label for="control-1"></label>
+          <label for="control-2"></label>
+          <label for="control-3"></label>
+          <label for="control-4"></label>
+        </div>
+      </ul>
+      <script>
+        // 獲取所有的 radio 按鈕
+        const slides = document.querySelectorAll('input[type="radio"]');
+        let currentSlide = 0; // 追踪當前的幻燈片
+      
+        // 自動輪換的功能，每3秒切換一次
+        setInterval(() => {
+          // 將當前幻燈片的 radio 按鈕取消選中
+          slides[currentSlide].checked = false;
+          
+          // 設置下一個幻燈片，若到達最後一張則回到第一張
+          currentSlide = (currentSlide + 1) % slides.length;
+          
+          // 將新的幻燈片的 radio 按鈕選中
+          slides[currentSlide].checked = true;
+        }, 3000); // 3000 毫秒等於 3 秒
+      </script>
+      <div class="title">
+        <h1>Enrich your life with amazing events</h1>
+        <p>Featured Events</p>
+      </div>
+      <ul class="item-list">
+        <li>
+          <a href="picture1.html">
+            <img src="picture1.jpg" alt="張學友60歲巡迴演唱會">
+            <dl>
+              <dt>張學友60歲巡迴演唱會          </dt>
+              <dd>巔峰演唱會震撼來襲！這是一場絕不容錯過的音樂盛宴，讓我們一同見證歌神的無限魅力！</dd>
+            </dl>
+            <p class="price">￥420</p>
+            <p class="item-label">AMERICANO</p> 
+          </a>
+        </li>
+        <li>
+          <a href="picture2.html">
+            <img src="picture2.jpg" alt="「在心底呼喚愛情」浪漫演奏會商品画像">
+            <dl>
+              <dt>「在心底呼喚愛情」浪漫演奏會</dt>
+              <dd>經典旋律化作音符，撫慰每個心靈，帶你走進愛情的純真與悸動。讓我們一同沉醉於這場無與倫比的音樂之旅！</dd>
+            </dl>
+            <p class="price">￥460</p>
+            <p class="item-label">CAFE LATTE</p>
+          </a>
+        </li>
+        <li>
+          <a href="picture3.html">
+            <img src="picture3.jpg" alt="レモネードの商品画像">
+            <dl>
+              <dt>ONE OK ROCK 世界巡演演唱會</dt>
+              <dd>激情搖滾，點燃全場，讓心跳隨節奏沸騰。這場音樂狂潮將帶來最熱血的音樂體驗，燃燒你的靈魂！</dd>
+            </dl>
+            <p class="price">￥420</p>
+            <p class="item-label">LEMONNADE</p>
+          </a>
+        </li>
+        <li>
+          <a href="picture4.html">
+            <img src="picture4.jpg" alt="ホットドック‐チリの商品画像">
+            <dl>
+              <dt>SEVENTEEN世界巡迴演唱會</dt>
+              <dd>震撼開場！燃爆全場的舞台魅力，絕對讓你心跳加速、熱血沸騰，快來親身感受這場無與倫比的音樂狂潮！</dd>
+            </dl>
+            <p class="price">￥540</p>
+            <p class="item-label">HOTDOG CHILI</p>
+          </a>
+        </li>
+        <li>
+          <a href="picture5.html">
+            <img  src="picture5.jpg" alt="レーズンバターサンドの商品画像">
+            <dl>
+              <dt>COLORFUL LIVE 3rd Evolve </dt>
+              <dd>2024年1月26日～1月28日に幕張メッセ 国際展示場 9-10ホールにて開催される「プロジェクトセカイ」</dd>
+            </dl>
+            <p class="price">￥480</p>
+            <p class="item-label">RAISIN BUTTER SAND</p>
+          </a>
+        </li>
+        <li>
+          <a href="picture6.html">  
+            <img src="picture6.jpg" alt="チーズケーキの商品画像">
+            <dl>
+              <dt>韓國音樂女神IU震撼回歸</dt>
+              <dd>女神IU的天籟之聲將再度引爆舞台，帶來無與倫比的感動與驚喜，快來感受這場音樂盛宴！</dd>
+            </dl>
+            <p class="price">￥480</p>
+            <p class="item-label">CHEESECAKE</p>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <!--main-->
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-content">
+          <div class="footer-section">
+              <h3>參與活動</h3>
+              <ul>
+                  <li><a href="#">常見問題</a></li>
+                  <li><a href="#">購票流程說明</a></li>
+                  <li><a href="#">探索所有活動</a></li>
+                  <li><a href="#">下載 App</a></li>
+              </ul>
+          </div>
+  
+          <div class="footer-section">
+              <h3>舉辦活動</h3>
+              <ul>
+                  <li><a href="#">主辦單位專區</a></li>
+                  <li><a href="#">如何舉辦活動</a></li>
+                  <li><a href="#">定價方式</a></li>
+              </ul>
+          </div>
+  
+          <div class="footer-section">
+              <h3>關於 KKTiX</h3>
+              <ul>
+                  <li><a href="#">聯絡我們</a></li>
+                  <li><a href="#">媒體素材</a></li>
+                  <li><a href="#">加入 KKTiX</a></li>
+                  <li><a href="#">隱私權政策</a></li>
+                  <li><a href="#">服務條款</a></li>
+              </ul>
+          </div>
+  
+          <div class="footer-section">
+              <h3>追蹤 KKTiX</h3>
+              <ul>
+                  <li><a href="#">台灣 <img src="facebook-icon.png" alt="Facebook"> <img src="instagram-icon.png" alt="Instagram"></a></li>
+                  <li><a href="#">香港 <img src="facebook-icon.png" alt="Facebook"> <img src="instagram-icon.png" alt="Instagram"></a></li>
+                  <li><a href="#">部落格</a></li>
+              </ul>
+          </div>
+      </div>
+  
+      <div class="footer-bottom">
+          <a class="footer-logo" href="index.html">
+              <img src="圖片庫/1.jpg" alt="TIKET">
+          </a>
+          <p class="footer-tel">TEL 01-2345-6789</p>
+          <p class="footer-time">OPEN Fri-Sun 11:00-16:00</p>
+          <p class="copyright">&copy; 華娛網路娛樂股份有限公司 WALKING INTERNET ENTERTAINMENT LIMITED</p>
+          <div class="language-switcher">
+              <a href="#">繁體中文</a> | <a href="#">English</a> | <a href="#">日本語</a>
+          </div>
+      </div>
+  </footer>
+  
+    <!--footer-->
+</body>
+
+</html>
